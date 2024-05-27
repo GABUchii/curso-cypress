@@ -2,11 +2,12 @@ import{LoginElements} from './login.elements'
 
 export class LoginMethods{// en este metodo le vamos a indicar 
     static insertUsername(username){
-        LoginElements.textBoxes.username.type(username)//de la clase LoginElements busca el grupo que se llama textboxes encuenta alli 
-    }//un elemento que se llama username y inserta el username que le estamos pasando aqui 
+        LoginElements.textBoxes.username.invoke( 'val', username)//de la clase LoginElements busca el grupo que se llama textboxes encuenta alli 
+    }//un elemento que se llama username y inserta el username que le estamos pasando aqui ..estamos usando invoke porque de lo contrario no completa bien a la hora de ejecutar 
+    //la prueba entonces cambiamos type por invoke  y ponemos val 
 
     static insertPassword(password){
-        LoginElements.textBoxes.password.type(password)
+        LoginElements.textBoxes.password.invoke( 'val', password)//lo mismo hacemos aca vamos a colocar invoke y val para que a la hora de ejecutarlo no falle
     }
 
     static clickOnLoginButton(){

@@ -4,16 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generar-reporte": "allure generate allure-results -o allure-report --clean"
+    "limpiar-reporte": "rimraf ./allure-report && rimraf ./allure-results",
+    "ejecutar-pruebas": "cypress run --headed --env allure=true",
+    "generar-reporte": "allure generate allure-results -o allure-report --clean",
+    "abrir-report": "allure open",
+    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte && npm run abrir-report "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.10.0"
+    "rimraf": "^5.0.7"
   },
   "dependencies": {
     "@shelex/cypress-allure-plugin": "^2.40.2",
-    "allure-commandline": "^2.29.0"
+    "allure-commandline": "^2.29.0",
+    "cypress": "^12.13.0"
   }
 }

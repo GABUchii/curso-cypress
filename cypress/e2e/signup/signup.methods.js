@@ -17,4 +17,4 @@ export class SignupMethods{
         this.insertPassword(password);
         this.clickOnSignuoButton();
     }
-}
+}//pagina 53 seguir con la 

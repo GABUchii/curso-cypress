@@ -4,7 +4,8 @@ import { CommonPageEments } from "./common-page.elements";
 
 export class CommonPageMethods{
     static navigateToDemoBLaze(){
-        cypress.visit(CommonPageData.url);
+        cy.clearCookies()//este metodo limpia el browser antes de ejecutarlo para no falle
+        cy.visit(CommonPageData.url);
     }
     static clickOnHomeOption(){
         CommonPageEments.topMenu.Home.click();
@@ -24,4 +25,11 @@ export class CommonPageMethods{
     static clickOnHomeOption(){
         CommonPageEments. topMenu.signUp.click();
     }
+
+    static verifyAlert(expectedMessage){//este metodo verifica que se esta mostrando una alerta 
+        cypress.on('window:alert',(str)=>{
+            expect(srt).to.equal(expectedMessage)//y la alerta muestra el texto que aqui le estamos pasando 
+        })
+    }
+
 }

@@ -1,3 +1,4 @@
+import { CommonPageMethods } from "../common-page/common-page.methods";
 import { SignupElements } from "./signup.elements";
 
 export class SignupMethods{
@@ -16,5 +17,9 @@ export class SignupMethods{
         this.insertUserName(username);
         this.insertPassword(password);
         this.clickOnSignuoButton();
+
     }
-}//pagina 53 seguir con la 
+      static verifySignupSuccesFullMessageDisplayed(){//aca estamos verificando que se muestre esa alerta
+        CommonPageMethods.verifyAlert("Sign up successful")// aca llamamos la metodo que creamos y le pasamo el msj que nos deberia mostrar en este caso seria sing un successful 
+    }
+}

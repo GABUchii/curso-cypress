@@ -10,7 +10,7 @@ export class SignupMethods{
         SignupElements.textBoxes.password.invoke('val',password)
     }
 
-    static clickOnSignuoButton(){
+    static clickOnSignupButton(){
         SignupElements.buttons.singup.click();
     }
     static singup(username,password){
@@ -20,6 +20,6 @@ export class SignupMethods{
 
     }
       static verifySignupSuccesFullMessageDisplayed(){//aca estamos verificando que se muestre esa alerta
-        CommonPageMethods.verifyAlert("Sign up successful")// aca llamamos la metodo que creamos y le pasamo el msj que nos deberia mostrar en este caso seria sing un successful 
+        CommonPageMethods.verifyAlert("Sign up successful")// aca llamamos la metodo que creamos y le pasamos el msj que nos deberia mostrar en este caso seria sing un successful 
     }
 }

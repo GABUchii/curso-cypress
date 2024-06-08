@@ -31,5 +31,18 @@ export class CommonPageMethods{
             expect(srt).to.equal(expectedMessage)//y la alerta muestra el texto que aqui le estamos pasando 
         })
     }
+//este metodo es para que cree un usuario y contraseña aleatorio
+    static generateRandomString(length = 10) { //le paso como parametro que reciba 10 caracteres 
+        let result = '';
+        const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';//de aqui le indico que el string sea solo en minuscula
+        const charactersLength = characters.length;
+        let counter = 0;
+        while (counter < length) {
+          result += characters.charAt(Math.floor(Math.random() * charactersLength));
+          counter += 1;
+        }
+        return result;
+    }
+
 
 }

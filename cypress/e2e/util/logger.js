@@ -14,7 +14,7 @@ export class Logger{
         cy.allure().step(text)
     }
     static verification(description){
-        const text =`veridication - ${description}`
+        const text =`verification - ${description}`
         cy.log(text)
         cy.allure().step(text)
     }

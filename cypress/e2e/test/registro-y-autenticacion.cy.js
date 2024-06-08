@@ -3,6 +3,8 @@ import { CommonPageData } from "../pages/common-page/common-page.data"
 import { CommonPageMethods } from "../pages/common-page/common-page.methods"
 import { SignupMethods } from "../pages/signup/signup.methods"
 import { Logger } from "../util/logger"
+const user = CommonPageMethods.generateRandomString()//aca creamos una variable donde la igualamos con el metodo para luego llamarla esta es para el usuario 
+const password =CommonPageMethods.generateRandomString()//aca hacemos lo mismo para la constraseña
 
 describe(CommonPageData.testSuites.resgistroYAutenticacion,()=>{//aca llamamos a la variable que ya declaramos en commonpage
     it("Registro de usuario valido",()=>{
@@ -16,14 +18,14 @@ describe(CommonPageData.testSuites.resgistroYAutenticacion,()=>{//aca llamamos a
 
         Logger.stepNumber(3)//paso3
         Logger.step('completar todos los campos obligatorios con informacion valida')//descripcion
-        SignupMethods.insertUserName('sfgdfhfghklfldj')//llamo al metodo que inserta usuario y le paso entre parentesis el usuario que en este caso es cualquiera 
-        SignupMethods.insertPassword('sfgdfhfghklfldj')//mismo con la contraseña 
+        SignupMethods.insertUserName(user)//aca llamo al metodo y le paso como parametro la variable creada arriba con el usuario 
+        SignupMethods.insertPassword(password)//aca hago lo mismo para la contraseña 
 
         Logger.stepNumber(4)//paso 4
         Logger.step('hacer click en "Sing up "en la barra de navegacion')//hacer click en boton signup
-        SignupMethods.clickOnSignuoButton();//metodo que hace click en el boton
+        SignupMethods.clickOnSignupButton();//metodo que hace click en el boton
         Logger.verification('verificar que se mustre el mensaje " Sign up successful"')
-        SignupMethods.verifySignupSuccesFullMessageDisplayed('Sign up successful')
+        SignupMethods.verifySignupSuccesFullMessageDisplayed()
     })
 
 })

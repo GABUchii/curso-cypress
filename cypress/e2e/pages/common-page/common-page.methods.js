@@ -10,24 +10,24 @@ export class CommonPageMethods{
     static clickOnHomeOption(){
         CommonPageEments.topMenu.Home.click();
     }
-    static clickOnHomeOption(){
+    static clickOnContactOption(){
         CommonPageEments.topMenu.contact.click();
     }
-    static clickOnHomeOption(){
+    static clickOnAboutUstOption(){
         CommonPageEments.topMenu.aboutUs.click();
     }
-    static clickOnHomeOption(){
+    static clickOnCartOption(){
         CommonPageEments.topMenu.cart.click();
     }
-    static clickOnHomeOption(){
+    static clickOnLoginption(){
         CommonPageEments.topMenu.login.click();
     }
-    static clickOnHomeOption(){
-        CommonPageEments. topMenu.signUp.click();
+    static clickOnSignupOption(){
+        CommonPageEments.topMenu.signup.click();
     }
 
     static verifyAlert(expectedMessage){//este metodo verifica que se esta mostrando una alerta 
-        cypress.on('window:alert',(str)=>{
+        cy.on('window:alert',(str)=>{
             expect(srt).to.equal(expectedMessage)//y la alerta muestra el texto que aqui le estamos pasando 
         })
     }

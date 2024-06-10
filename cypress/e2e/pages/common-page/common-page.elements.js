@@ -2,26 +2,26 @@ export class CommonPageEments{
     static get topMenu(){
         return{
             get Home(){
-                return cypress.contains("a","Home");
+                return cy.contains("a","Home");
             },
             get contact(){
-                return cypress.contains("a","contact");
+                return cy.contains("a","contact");
 
             },
 
             get aboutUs(){
-                return cypress.contains("a","About us ");
+                return cy.contains("a","About us ");
         },
             get cart(){
-                return cypress.contains("a","Cart");
+                return cy.contains("a","Cart");
 
     },
             get login(){
-                return cypress.contains("a","Log In");
+                return cy.get('a[data-target="#logInModal"]')  //cy.contains("a","Log In");
 },
-            get signUp(){
-                return cypress.contains("a","Sign Up");
-},//segui video 59 que se quedo a la mitad
+            get signup(){
+                return  cy.get('a[data-target="#signInModal"]')   //cy.contains("a","Sign Up");
+},
 };
 
 

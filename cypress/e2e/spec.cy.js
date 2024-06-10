@@ -18,7 +18,7 @@ describe('template spec', () => {
     Logger.stepNumber(3)//paso numero 3
     Logger.step(`login with this credentials:" ${usuario}/${contraseña}"`)//aca le decimos que se logea con estas credenciales usuario y contraseña
     LoginMethods.login(usuario,contraseña)
-    Logger.verification(`the Home should show "Welcome ${usuario}"`)
+    Logger.verification(`the Home should show "Welcome ${usuario}" text`)
 
     cy.get('a#nameofuser').should('contain.text',usuario)
     cy.wait(5000)

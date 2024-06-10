@@ -12,7 +12,7 @@ export class LoginMethods{// en este metodo le vamos a indicar
     }
 
     static clickOnLoginButton(){
-        LoginElements.buttoms.login.click()//aca creamos el metodo para el boton login donde le estamos indicando que en la clase LoginElements busque el elemento buttons y haz clic en login 
+        LoginElements.buttons.login.click()//aca creamos el metodo para el boton login donde le estamos indicando que en la clase LoginElements busque el elemento buttons y haz clic en login 
     }
     static login(username,password){
         Logger.subStep('Insert username')

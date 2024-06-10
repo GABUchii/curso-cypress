@@ -9,7 +9,7 @@ export class LoginElements{
             }
         };
     }
-static get buttoms(){//aca armamos la clase para los botones 
+static get buttons(){//aca armamos la clase para los botones 
     return{
         get close(){//este es el boton close 
             return cy.get('div[id="logInModal"] button').eq(1);//este es el selector del boton

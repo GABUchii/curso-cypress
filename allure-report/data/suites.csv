@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jun 11 12:48:24 CEST 2024","Tue Jun 11 12:48:26 CEST 2024","1695","","Registro","","","","Registro de usuario valido",""
+"passed","Tue Jun 11 12:48:11 CEST 2024","Tue Jun 11 12:48:14 CEST 2024","3532","","Autenticacion","","","","Inicio de sesion valido",""
+"passed","Tue Jun 11 12:47:47 CEST 2024","Tue Jun 11 12:47:56 CEST 2024","9304","","template spec","","","","passes",""
+"passed","Tue Jun 11 12:48:26 CEST 2024","Tue Jun 11 12:48:27 CEST 2024","1063","","Registro","","","","Registro de usuario invalido",""

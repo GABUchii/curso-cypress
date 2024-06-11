@@ -1,6 +1,6 @@
 import common from "mocha/lib/interfaces/common";
 import { CommonPageData } from "./common-page.data";
-import { CommonPageEments } from "./common-page.elements";
+import { CommonPageElements } from "./common-page.elements";
 
 export class CommonPageMethods{
     static navigateToDemoBLaze(){
@@ -8,22 +8,22 @@ export class CommonPageMethods{
         cy.visit(CommonPageData.url);
     }
     static clickOnHomeOption(){
-        CommonPageEments.topMenu.Home.click();
+        CommonPageElements.topMenu.Home.click();
     }
     static clickOnContactOption(){
-        CommonPageEments.topMenu.contact.click();
+        CommonPageElements.topMenu.contact.click();
     }
     static clickOnAboutUstOption(){
-        CommonPageEments.topMenu.aboutUs.click();
+        CommonPageElements.topMenu.aboutUs.click();
     }
     static clickOnCartOption(){
-        CommonPageEments.topMenu.cart.click();
+        CommonPageElements.topMenu.cart.click();
     }
-    static clickOnLoginption(){
-        CommonPageEments.topMenu.login.click();
+    static clickOnLoginOption(){
+        CommonPageElements.topMenu.login.click();
     }
     static clickOnSignupOption(){
-        CommonPageEments.topMenu.signup.click();
+        CommonPageElements.topMenu.signup.click();
     }
 
     static verifyAlert(expectedMessage){//este metodo verifica que se esta mostrando una alerta 
@@ -43,6 +43,22 @@ export class CommonPageMethods{
         }
         return result;
     }
+
+
+    static verifySignedUser(username) { // verificar el usuario logueado/registrado
+        cy.wait(2000);//espera 2 segundos 
+        //obtiene el texto del elemento y realiza una verificacion intermedia
+        CommonPageElements.signedUser.invoke('text').then((text) => {
+            //imprime el texto para depurarlo
+            cy.log(`texto del elemento : "${text.trim()}`);
+            //realiza la verificacion
+            expect(text.trim().toLowerCase()).to.equal(`welcome ${username.toLowerCase()}`);
+        });
+    }
+
+  //static verifySignedUser(username){//verificar el usuario logueado/registrado 
+        //CommonPageElements.signedUser.should("have.text",`welcome ${username}`);
+    //}
 
 
 }

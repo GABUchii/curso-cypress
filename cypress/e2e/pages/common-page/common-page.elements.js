@@ -1,4 +1,4 @@
-export class CommonPageEments{
+export class CommonPageElements{
     static get topMenu(){
         return{
             get Home(){
@@ -25,6 +25,10 @@ export class CommonPageEments{
 };
 
 
+}
+static get signedUser(){//usuario registrado/logueado
+  
+    return cy.get('a#nameofuser')
 }
 
 }

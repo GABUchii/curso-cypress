@@ -6,7 +6,7 @@ export class LoginElements{
             },
             get password(){
                  return cy.get('input#loginpassword');//aca pasamo el selector del password
-            }
+            },
         };
     }
 static get buttons(){//aca armamos la clase para los botones 
@@ -17,7 +17,9 @@ static get buttons(){//aca armamos la clase para los botones
         get login(){//boton log in
             return cy.contains('button', 'Log in');//este es el selector del boton
 
-        }
-    }
+        },
+    };
 }
+
+
 }

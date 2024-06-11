@@ -27,7 +27,7 @@ export class SignupMethods{
     // este metodo servira para verificar que muestre el msj de alerta cuando el usuario ya este registrado 
 
 static verifyThatThisUserAlreadyExistMessageIsDisplayed(){
-    CommonPageMethods.verifyAlert('this user already exist.')
+    CommonPageMethods.verifyAlert('This user already exist.')
 }
 
 

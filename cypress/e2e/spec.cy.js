@@ -4,7 +4,7 @@ import { Logger } from './util/logger';
 describe('template spec', () => {
   it('passes', () => {
     const usuario= 'random01';
-    const contraseña='random01'
+    const contrasena='random01'
 
     Logger.stepNumber(1)//aca llamamos al lo que hemos detallado en logger que son los pasos en este caso es el paso numero 1
     Logger.step('navegate to Demoblaze page')//aca le pasamos la descripcion que debe hacer el paso numero 1(seria ingresar a la pagina)
@@ -16,8 +16,8 @@ describe('template spec', () => {
     cy.get('a[data-target="#logInModal"]').click()
 
     Logger.stepNumber(3)//paso numero 3
-    Logger.step(`login with this credentials:" ${usuario}/${contraseña}"`)//aca le decimos que se logea con estas credenciales usuario y contraseña
-    LoginMethods.login(usuario,contraseña)
+    Logger.step(`login with this credentials:" ${usuario}/${contrasena}"`)//aca le decimos que se logea con estas credenciales usuario y contraseña
+    LoginMethods.login(usuario,contrasena)
     Logger.verification(`the Home should show "Welcome ${usuario}" text`)
 
     cy.get('a#nameofuser').should('contain.text',usuario)
